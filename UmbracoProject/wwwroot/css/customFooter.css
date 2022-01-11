@@ -1,0 +1,188 @@
+.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+.main-footer {
+    background-color: rgb(19, 32, 52);
+}
+
+@media only screen and (max-width: 1024px){
+.main-footer .footer-head {
+    display: none;
+}}
+
+.footer-head{
+    max-width: 1200px;
+    box-sizing: content-box;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+    margin: 0px auto;
+}
+
+.footer-head>span {
+    font-size: 1.125rem;
+    font-family: Nunito, SansSerif;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    
+}
+
+@media only screen and (min-width: 1024px){
+.footer-head>span:not(:first-child) {
+    margin-left: 32px;
+}}
+
+.divider.dark {
+    border-color: rgb(37, 58, 90);
+}
+.divider {
+    display: flex;
+    border-style: solid;
+}
+
+.main-footer .footer-body {
+    display: grid;
+    max-width: 1215px;
+    box-sizing: content-box;
+    margin: 0px auto;
+}
+
+@media only screen and (max-width: 767px){
+.main-footer .footer-body {
+    grid-template-areas:
+        "general-info"
+        "social";
+    column-gap: 66px;
+    padding: 54px 32px 24px 24px;
+}}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px){
+.main-footer .footer-body {
+    grid-template-areas:
+        "general-info links links"
+        "social social social";
+    column-gap: 66px;
+    padding: 54px 32px 24px 24px;
+}}
+
+@media only screen and (min-width: 1024px){
+.main-footer .footer-body {
+    grid-template-areas:
+        "general-info links links social";
+    display: flex;
+    justify-content: space-between;
+    padding: 58px 24px;
+}}
+
+
+
+.main-footer .footer-body * {
+    color: rgb(255, 255, 255);
+}
+
+.main-footer .footer-body .general-info {
+    grid-area: general-info / general-info / general-info / general-info;
+    
+    max-width: 385px;
+    margin-right: 16px;
+}
+
+.main-footer .footer-body .general-info__logo {
+    
+    width: 215px;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+
+.main-footer .footer-body .links {
+    grid-area: links / links / links / links;
+    
+    margin-left: 16px;
+}
+
+.main-footer .footer-body .links .column-header{
+    
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}    
+
+.main-footer .footer-body .social {
+    margin-left: 16px;
+    grid-area: social / social / social / social;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+.main-footer .footer-body .social {
+    margin: 48px auto 0px;
+}}
+
+@media only screen and (max-width: 768px){
+.main-footer .footer-body .social {
+    margin: 48px auto 0px;
+}}
+
+@media only screen and (max-width: 1024px)
+{
+.main-footer .footer-body .social .column-header {
+    display: none;
+}}
+
+
+@media only screen and (min-width: 767px) and (max-width: 1024px){
+.main-footer .footer-body .hidden-links {
+    display:none;
+}}
+
+@media only screen and (max-width: 767px){
+.main-footer .footer-body .links {
+    display:none;
+}}
+
+
+
+
+@media only screen and (min-width: 1024px){
+.main-footer .footer-body .column-header {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}}
+
+.main-footer .footer-body .social .media-icons {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 19px;
+    width: min-content;
+}
+
+.main-footer .footer-body .social .media-icons .icon {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-radius: 5px;
+}
+
+/*start -- proportions of the logo depending on the screen*/
+.main-footer .footer-body .general-info__logo {
+    width: 150px;
+}
+
+@media only screen and (min-width: 768px){
+.main-footer .footer-body .general-info__logo {
+    width: 178px;
+}}
+
+@media only screen and (min-width: 1024px){
+.main-footer .footer-body .general-info__logo {
+    width: 215px;
+}}
+/*end -- proportions of the logo depending on the screen*/
+

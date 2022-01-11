@@ -1,0 +1,22 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/customHeader.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/customFooter.css")" />
+</head>    
+
+<body>
+    @await Html.PartialAsync("~/Views/Partials/PageBlocks/_HeaderBlock.cshtml")
+    
+    <main>
+        @RenderBody()
+    </main>
+    
+     @await Html.PartialAsync("~/Views/Partials/PageBlocks/_FooterBlock.cshtml")
+</body>
+</html>
