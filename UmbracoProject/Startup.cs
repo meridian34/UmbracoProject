@@ -42,7 +42,7 @@ namespace UmbracoProject
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
-                .AddComposers()
+                .AddComposers()                
                 .Build();
 #pragma warning restore IDE0022 // Use expression body for methods
 

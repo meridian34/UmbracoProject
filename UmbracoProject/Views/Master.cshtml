@@ -1,22 +1,60 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using System.Globalization
+@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Services
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.Components.Header;
+@inject ILocalizationService LocalizationService
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = null;
+    Layout = null;
 }
 
 <html>
 <head>
     <link rel="stylesheet" href="@Url.Content("~/css/customHeader.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/customFooter.css")" />
-</head>    
+    <link rel="stylesheet" href="@Url.Content("~/css/customHome.css")" />
+</head>
 
 <body>
-    @await Html.PartialAsync("~/Views/Partials/PageBlocks/_HeaderBlock.cshtml")
-    
+    @await Component.InvokeAsync(typeof(HeaderViewComponent))
+    @*@await Html.PartialAsync("~/Views/Partials/PageBlocks/_HeaderBlock.cshtml", Model)*@
+
     <main>
         @RenderBody()
     </main>
+
+    @{
+        // Get a collection of all languages
+        IEnumerable<ILanguage> languages = LocalizationService.GetAllLanguages();
     
-     @await Html.PartialAsync("~/Views/Partials/PageBlocks/_FooterBlock.cshtml")
+        // Iterate over the collection
+        foreach (ILanguage language in languages)
+        {
+
+            // Get the .NET culture info
+            CultureInfo cultureInfo = language.CultureInfo;
+
+            <pre>ID: @language.Id</pre>
+            <pre>Key: @language.Key</pre>
+            <pre>Name: @language.CultureName</pre>
+            <pre>ISO: @language.IsoCode</pre>
+            <pre>Culture info: @cultureInfo</pre>
+            <hr />
+
+        }
+
+        // Get a reference to the language by its ID
+        ILanguage language1 = LocalizationService.GetLanguageById(1);
+
+        // Get a reference to the language by its ISO code
+        ILanguage language2 = LocalizationService.GetLanguageByIsoCode("en-US");
+
+        <pre>@language1</pre>
+        <pre>@language2</pre>
+    }
+
+
+    @await Html.PartialAsync("~/Views/Partials/PageBlocks/_FooterBlock.cshtml")
 </body>
 </html>

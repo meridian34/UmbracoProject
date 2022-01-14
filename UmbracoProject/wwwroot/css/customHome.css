@@ -1,0 +1,85 @@
+img {
+    user-select: none;
+    max-width: 100%;
+}
+
+.start-page {
+    perspective: 10px;
+    perspective-origin: 68% 450px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.start-page .top-section .balloons-section>.content-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+.start-page .top-section .balloons-section {
+    transform-style: preserve-3d;
+    display: flex;
+    padding: 24px 24px 10%;
+    margin: 0 auto -10%;
+    position: relative;
+    z-index: 1;
+}
+
+.top-section .balloons-section>.background {
+    width: 100%;
+    position: absolute;
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
+}
+
+.top-section .balloons-section>.balloons {
+    transform-style: preserve-3d;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1024px){
+.top-section .balloons-section {
+    height: 770px;
+}}
+
+.start-page .top-section .balloons-section>.balloons>.balloon-container {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 1024px){
+.top-section .balloons-section>.balloons .balloon-container.distance-close {
+    top: 40%;
+    right: 48%;
+}}
+    
+ .top-section .balloons-section>.balloons>.balloon-container .balloon {
+    display: flex;
+}
+@media only screen and (min-width: 1024px){
+.top-section .balloons-section>.balloons .balloon-container.distance-close .balloon {
+    height: 598px;
+    width: 598px;
+    min-width: 598px;
+}}
+        
+@media only screen and (min-width: 1024px){
+.top-section .balloons-section>.balloons .balloon-container.distance-close .balloon {
+    height: 598px;
+    width: 598px;
+    min-width: 598px;
+}}        
+        
+       
+

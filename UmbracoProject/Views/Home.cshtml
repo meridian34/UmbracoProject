@@ -1,17 +1,61 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "Master.cshtml";
 }
+<div class="start-page">
 
-
- <footer class="section--themed">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ta-center">
-                   
-                </div>
+<div class="top-section">
+    <div class="balloons-section">
+        <img class="background" src="https://ge-cms-dev.azurewebsites.net/media/uivjoo4b/start-page-balloons-background.svg" alt="">
+        <div class="balloons">
+            <div class="balloon-container distance-close"><div class="balloon">
+                <img src="https://ge-cms-dev.azurewebsites.net/media/icjilwxk/big-balloon.svg" alt="">
             </div>
         </div>
-    </footer>
+        <div class="balloon-container distance-middle left">
+            <div class="balloon">
+                <img src="https://ge-cms-dev.azurewebsites.net/media/mdxmhtw1/blue-balloon.svg" alt="">
+            </div>
+        </div>
+        <div class="balloon-container distance-middle right">
+            <div class="balloon">
+                <img src="https://ge-cms-dev.azurewebsites.net/media/qoldmfbb/orange-balloon.svg" alt="">
+            </div>
+        </div>
+        <div class="balloon-container distance-far">
+            <div class="balloon">
+                <img src="https://ge-cms-dev.azurewebsites.net/media/5rwcwow5/small-balloon.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="clouds">
+        <img class="cloud left" src="https://ge-cms-dev.azurewebsites.net/media/1j2d2f1j/vector-1.svg" alt="">
+        <img class="cloud right" src="https://ge-cms-dev.azurewebsites.net/media/ho3guvuz/cloud2.svg" alt="">
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <h1>@Model.Value("homePageSlideOneText")</h1>
+            <p>@Model.Value("homePageSlideOneText")</p>
+            <div class="buttons">
+                <button class="button primary large">
+                    <span class="button__label">Get started with Goal Envision </span>
+                </button>
+                <button class="link-decorated primary medium">
+                    <div class="link-decorated__icon">
+                        <svg class="icon-large" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M17.2903 6.17661V2.30564C17.2839 2.1556 17.2033 2.01857 17.0753 1.94003C16.9532 1.86491 16.806 1.84165 16.6667 1.87553L8.12904 5.27338H3.91398C3.11933 5.28906 2.39536 5.73333 2.02148 6.43466L1.63439 6.5852C0.654345 6.92483 -0.00211736 7.84906 -1.8062e-05 8.88627C-0.00619246 9.91983 0.653522 10.84 1.63439 11.1659L1.89244 11.2734C2.09113 11.7877 2.47456 12.2095 2.96769 12.4562L4.10748 16.5852C4.41324 17.7083 5.57156 18.3709 6.69464 18.0651C7.14763 17.9418 7.5465 17.6707 7.82793 17.2949C8.21824 16.7548 8.34461 16.0676 8.17201 15.4239L7.39782 12.5852H8.12899L16.6666 16.0476L16.8172 16.0906C16.9073 16.092 16.9963 16.0698 17.0752 16.0261C17.2028 15.9576 17.2846 15.8267 17.2902 15.682V11.596C18.7868 11.596 19.9999 10.3828 19.9999 8.88623C19.9999 7.38976 18.7868 6.17666 17.2903 6.17661ZM1.80645 10.3056C1.23173 10.0757 0.868144 9.50429 0.903215 8.88627C0.868144 8.26826 1.23173 7.69688 1.80645 7.4669V10.3056ZM7.13977 16.7573C6.90292 17.0762 6.52616 17.2605 6.12902 17.2519C5.56357 17.2346 5.0753 16.851 4.92473 16.3056L3.91398 12.5852H6.51612L7.33332 15.639C7.44499 16.0216 7.37358 16.4344 7.13977 16.7573ZM7.82797 11.725H3.91398C3.26171 11.7607 2.70396 11.2609 2.66819 10.6087C2.66658 10.5794 2.66605 10.55 2.66667 10.5207V7.4669C2.64254 6.7547 3.20034 6.15776 3.91254 6.1336C3.91303 6.1336 3.91348 6.13356 3.91398 6.13356H7.82797V11.725ZM16.4301 15.0368L8.68815 11.94V6.04757L16.4301 2.95078V15.0368ZM17.2903 10.7358V7.03683C18.3118 7.03687 19.1398 7.86494 19.1397 8.8864C19.1396 9.90772 18.3117 10.7357 17.2903 10.7358Z" stroke-width="0.5"></path>
+                        </svg>
+                    </div>
+                    <span class="link-decorated__label">I have an invitation code </span>
+                    <div class="link-decorated__icon">
+                        <svg class="icon-medium" width="12" height="8" viewBox="0 0 12 8" fill="currentColor" stroke="currentColor">
+                            <path d="M8.74988 1.23186C8.56725 1.41535 8.56795 1.71214 8.75145 1.89477L10.3959 3.53127L0.46875 3.53127C0.209859 3.53127 -1.38353e-07 3.74113 -1.27036e-07 4.00002C-1.1572e-07 4.25891 0.209859 4.46877 0.46875 4.46877L10.3959 4.46877L8.75142 6.10527C8.56793 6.28789 8.56723 6.58468 8.74985 6.76817C8.9325 6.95169 9.22929 6.95237 9.41278 6.76977L11.8621 4.33227C11.8623 4.33213 11.8624 4.33196 11.8625 4.33182C12.0455 4.1492 12.0461 3.85145 11.8625 3.66821C11.8624 3.66807 11.8623 3.66791 11.8621 3.66777L9.41281 1.23027C9.22934 1.04769 8.93252 1.04832 8.74988 1.23186Z" stroke-width="0.5"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
