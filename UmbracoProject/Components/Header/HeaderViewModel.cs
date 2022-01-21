@@ -11,6 +11,8 @@ namespace UmbracoProject.Components.Header
         public MediaWithCrops Logo { get; set; }
         public IEnumerable<Link> NavigationLinks { get; set; }
         public IEnumerable<Link> LanguageLinks { get; set; }
+        public string CurrentUrl { get; set; }
+        public string CurrentCultureName { get; set; }
 
     }
 }

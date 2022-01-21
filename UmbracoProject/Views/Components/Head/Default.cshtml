@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model UmbracoProject.Components.Head.HeadViewModel
+@{
+    <head>
+        <meta charset="utf-8" />
+        <title>@Model.Title</title>
+        <meta name="description" content="@Model.Description" />
+        <meta name="keywords" content="@Model.Keywords" />
+
+        <link rel="stylesheet" href="@Url.Content("~/css/customHeader.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/css/customFooter.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/css/customHome.css")" />
+
+        <meta property="og:title" content="@Model.OpenGraphTitle" />
+        <meta property="og:type" content="@Model.OpenGraphType" />
+        <meta property="og:url" content="@Model.OpenGraphUrl" />
+        <meta property="og:image" content="@Model.OpenGraphImage" />
+
+    </head>
+}

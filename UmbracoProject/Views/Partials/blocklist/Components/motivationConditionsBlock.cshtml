@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Umbraco.Cms.Web.Common.PublishedModels.MotivationConditionsBlock;
+<div class="conditions-for-motivation">
+    <img class="conditions-for-motivation__image" src="@Model.MainImage.Url()" alt="">
+    <div class="conditions-for-motivation__body">
+        <span class="conditions-for-motivation__body--subtitle">@Model.TextBlockSubtitle</span>
+        <h2 class="conditions-for-motivation__body--heading">@Model.TextBlockTitle</h2>
+        <p class="conditions-for-motivation__body--description">@Model.TextBlockDescription</p>
+        <button class="button primary large conditions-for-motivation__body--button">
+            <span class="button__label">@Model.ButtonText</span>
+        </button>
+    </div>
+</div>

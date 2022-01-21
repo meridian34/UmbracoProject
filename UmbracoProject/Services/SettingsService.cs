@@ -21,11 +21,22 @@ namespace UmbracoProject.Services
         {
             var settings = _umbracoHelper
                 .ContentAtRoot()
-                .Where(x => x.GetType() == typeof(SiteSettings)).OfType<SiteSettings>()
-                .FirstOrDefault();
-                
+                .DescendantsOrSelf<HomePage>()
+                .First()
+                .DescendantsOrSelf<SiteSettings>()
+                .First();
 
             return settings;
+        }
+
+        public IBaseSeoBlock GetDefautSiteSeo()
+        {
+            return GetSettings().DescendantOrSelf<IBaseSeoBlock>();
+        }
+
+        public IOpenGraphSeoData GetDefautOpenGraphSeo()
+        {
+            return GetSettings().DescendantOrSelf<IOpenGraphSeoData>();
         }
     }
 }

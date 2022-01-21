@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Organizations page</summary>
 	[PublishedModel("organizationsPage")]
-	public partial class OrganizationsPage : PublishedContentModel
+	public partial class OrganizationsPage : PublishedContentModel, IBaseSeoBlock, IOpenGraphSeoData
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -79,5 +79,69 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("umbracoUrlName")]
 		public virtual string UmbracoUrlName => this.Value<string>(_publishedValueFallback, "umbracoUrlName");
+
+		///<summary>
+		/// Open Graph Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openGraphImage")]
+		public virtual string OpenGraphImage => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetOpenGraphImage(this, _publishedValueFallback);
+
+		///<summary>
+		/// Open Graph Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openGraphTitle")]
+		public virtual string OpenGraphTitle => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetOpenGraphTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// OpenGraphType
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openGraphType")]
+		public virtual string OpenGraphType => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetOpenGraphType(this, _publishedValueFallback);
+
+		///<summary>
+		/// Open Graph Url
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openGraphUrl")]
+		public virtual string OpenGraphUrl => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetOpenGraphUrl(this, _publishedValueFallback);
+
+		///<summary>
+		/// Seo Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("seoDescription")]
+		public virtual string SeoDescription => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetSeoDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Seo Keywords
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("seoKeywords")]
+		public virtual string SeoKeywords => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetSeoKeywords(this, _publishedValueFallback);
+
+		///<summary>
+		/// Seo Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("seoTitle")]
+		public virtual string SeoTitle => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetSeoTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Open Graph List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openGraphList")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel OpenGraphList => global::Umbraco.Cms.Web.Common.PublishedModels.OpenGraphSeoData.GetOpenGraphList(this, _publishedValueFallback);
 	}
 }

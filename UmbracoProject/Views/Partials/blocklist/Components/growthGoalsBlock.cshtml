@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Umbraco.Cms.Web.Common.PublishedModels.GrowthGoalsBlock;
+<div class="goals-for-growth">
+    <div class="wrapper">
+        <div class="body">
+            <span class="body__subtitle">@Model.TextBlockSubtitle</span>
+            <h2 class="body__heading">@Model.TextBlockTitle</h2>
+            <p class="body__description">@Model.TextBlockDescription</p>
+            <button class="button primary large body__button"><span class="button__label">@Model.ButtonText</span></button>
+        </div>
+        <img class="image" src="@Model.MainImage.Url()" alt="">
+    </div>
+</div>

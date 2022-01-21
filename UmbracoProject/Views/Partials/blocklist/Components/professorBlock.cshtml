@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Umbraco.Cms.Web.Common.PublishedModels.ProfessorBlock;
+    <div class="top-section">
+        <div class="professor-section" style="background:url(@Model.BackgroundImage.Url());background-size:cover">
+            <div class="professor-section__professor-image">
+                <img src="@Model.MainImage.Url()" alt="">
+            </div>
+            <div class="professor-section__content">
+                <span class="professor-section__content--credits">@Model.TextBlockSubtitle</span>
+                <h4 class="professor-section__content--heading">@Model.TextBlockTitle</h4>
+                <p class="professor-section__content--description">@Model.TextBlockDescription</p>
+
+
+                <button class="button accent large professor-section__content--button ghost">
+                    <span class="button__label">@Model.ButtonText</span>
+                </button>
+            </div>
+        </div>
+    </div>

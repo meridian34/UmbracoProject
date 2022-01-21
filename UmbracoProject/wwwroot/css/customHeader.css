@@ -21,6 +21,12 @@ var, video {
     vertical-align: baseline;
 }
 
+
+.page-header-menu__item a:active {
+    background-color: yellow;
+}
+
+
 header body footer {
     display : block;
 }

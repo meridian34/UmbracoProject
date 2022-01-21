@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Umbraco.Cms.Web.Common.PublishedModels.BalloonsBlock;
+    <div class="top-section">
+        <div class="balloons-section">
+            <img class="background" src="@Model.BackgroundImage.Url()" alt="">
+            <div class="balloons">
+                <div class="balloon-container distance-close">
+                    <div class="balloon">
+                        <img src="@Model.MainImage.Url()" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="clouds">
+                <img class="cloud left" src="https://ge-cms-dev.azurewebsites.net/media/1j2d2f1j/vector-1.svg" alt="">
+                <img class="cloud right" src="https://ge-cms-dev.azurewebsites.net/media/ho3guvuz/cloud2.svg" alt="">
+            </div>
+            <div class="content-wrapper">
+                <div class="content">
+                    <h1>@Model.TextBlockTitle</h1>
+                    <p>@Model.TextBlockDescription</p>
+                    <div class="buttons">
+                        <button class="button primary large">
+                            <span class="button__label">@Model.ButtonText</span>
+                        </button>
+                        <button class="link-decorated primary medium">
+                            <span class="link-decorated__label">@Model.LinkText</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

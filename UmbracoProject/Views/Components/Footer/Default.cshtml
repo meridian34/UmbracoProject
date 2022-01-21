@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model UmbracoProject.Components.Footer.FooterViewModel
+
+<section class="main-footer">
+
+    <div class="footer-head">
+        <span class="head-footer--item">Visionary</span>
+        <span class="head-footer--item">Strategic</span>
+        <span class="head-footer--item">Engaging</span>
+    </div>
+
+    <div class="divider dark" style="border-top-width:2px"></div>
+
+    <div class="footer-body">
+        <div class="general-info">
+            <img src="@Model.FooterLogo.Url()" alt="footer logo" class="general-info__logo">
+            <p class="general-info__description">@Model.FooterGeneralInfo</p>
+        </div>
+
+        @foreach (var navBlock in Model.FooterNavigationBlockList)
+        {
+            <div class="links">
+                <h4 class="column-header">@navBlock.ElementTitle</h4>
+                <ul>
+                    @foreach (var link in navBlock.ElementLinks)
+                    {
+                        <li><a href="@link.Url">@link.Name</a></li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <div class="social">
+            <h4 class="column-header">@Model.SocialTitle</h4>
+            <div class="media-icons">
+                @foreach (var svg in Model.SocialSourceList)
+                {
+                    <a href="@svg.MediaItemUrl" class="icon control">
+                        <svg width="@svg.SvgWidth" height="@svg.SvgHeight" viewBox="0 0 @svg.SvgWidth @svg.SvgHeight" fill="currentColor">
+                            @foreach (var svgPath in svg.PathList)
+                            {
+                                <path d="@svgPath"></path>
+                            }
+                        </svg>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+
+</section>

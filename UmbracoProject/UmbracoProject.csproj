@@ -19,7 +19,6 @@
       </Content>
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Components\Footer\" />
       <Folder Include="Views\Shared\" />
     </ItemGroup>
 
