@@ -32,7 +32,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string OpenGraphTitle { get; }
 
-		/// <summary>OpenGraphType</summary>
+		/// <summary>Open Graph Type</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string OpenGraphType { get; }
@@ -116,14 +116,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static string GetOpenGraphTitle(IBaseSeoBlock that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "openGraphTitle");
 
 		///<summary>
-		/// OpenGraphType
+		/// Open Graph Type
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("openGraphType")]
 		public virtual string OpenGraphType => GetOpenGraphType(this, _publishedValueFallback);
 
-		/// <summary>Static getter for OpenGraphType</summary>
+		/// <summary>Static getter for Open Graph Type</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetOpenGraphType(IBaseSeoBlock that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "openGraphType");

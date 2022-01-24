@@ -25,7 +25,7 @@ namespace UmbracoProject.Components.Head
             var seoData = (IBaseSeoBlock)page;
             var defaultSeo = _settingsService.GetDefautSiteSeo();
             var head = new HeadViewModel();
-
+            
             head.Title = string.IsNullOrWhiteSpace(seoData.SeoTitle) ? defaultSeo.SeoTitle : seoData.SeoTitle;
             head.Description = string.IsNullOrWhiteSpace(seoData.SeoDescription) ? defaultSeo.SeoDescription : seoData.SeoDescription;
             head.Keywords = string.IsNullOrWhiteSpace(seoData.SeoKeywords)? defaultSeo.SeoKeywords : seoData.SeoKeywords;
