@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
-using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Extensions;
 using UmbracoProject.Services;
@@ -15,6 +11,7 @@ namespace UmbracoProject.Components.Header
     {
         private readonly SettingsService _settingsService;
         private readonly PageCultureService _pageCultureService;
+
         public HeaderViewComponent(SettingsService settingsService, PageCultureService pageCultureService)
         {
             _settingsService = settingsService;

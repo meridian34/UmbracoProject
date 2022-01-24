@@ -50,29 +50,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// OrganisationTitle
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("organisationTitle")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> OrganisationTitle => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "organisationTitle");
-
-		///<summary>
-		/// OrgTitile2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("orgTitile2")]
-		public virtual string OrgTitile2 => this.Value<string>(_publishedValueFallback, "orgTitile2");
-
-		///<summary>
-		/// OrgTitle3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[ImplementPropertyType("orgTitle3")]
-		public virtual bool OrgTitle3 => this.Value<bool>(_publishedValueFallback, "orgTitle3");
-
-		///<summary>
 		/// umbracoUrlName
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]

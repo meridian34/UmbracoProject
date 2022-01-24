@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IBaseSeoBlock, IOpenGraphSeoData
+	public partial class HomePage : PublishedContentModel, IBaseSeoBlock
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -112,13 +112,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("seoTitle")]
 		public virtual string SeoTitle => global::Umbraco.Cms.Web.Common.PublishedModels.BaseSeoBlock.GetSeoTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Open Graph List
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("openGraphList")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel OpenGraphList => global::Umbraco.Cms.Web.Common.PublishedModels.OpenGraphSeoData.GetOpenGraphList(this, _publishedValueFallback);
 	}
 }

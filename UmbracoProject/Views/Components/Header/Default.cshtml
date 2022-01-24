@@ -1,15 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model UmbracoProject.Components.Header.HeaderViewModel
+﻿@model UmbracoProject.Components.Header.HeaderViewModel
 
 <header class="main-header">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
     <div class="nav-panel">
         <img src="@Model.Logo.Url()" alt="logo" class="nav-panel__logo">
         <div class="nav-panel__menus">
-
             <div class="page-header-menu">
 
                 @foreach (var item in Model.NavigationLinks)
@@ -27,15 +22,12 @@
 
                         </a>
                     </div>
-
                 }
             </div>
-
 
             <div class="lang">
                 @foreach (var language in Model.LanguageLinks)
                 {
-
                     if (language.Name == Model.CurrentCultureName)
                     {
                         <a style="margin-left: 10px; margin-right: 10px;" href="@language.Url"><span style="color: red">@language.Name</span></a>
@@ -44,10 +36,8 @@
                     {
                         <a style="margin-left: 10px; margin-right: 10px;" href="@language.Url"><span>@language.Name</span></a>
                     }
-
                 }
             </div>
         </div>
-
     </div>
 </header>

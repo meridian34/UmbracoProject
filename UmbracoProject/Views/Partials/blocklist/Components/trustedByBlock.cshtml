@@ -1,15 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@model Umbraco.Cms.Web.Common.PublishedModels.TrustedByBlock;
+﻿@model Umbraco.Cms.Web.Common.PublishedModels.TrustedByBlock;
 <div class="trusted-by">
     <h2 class="heading">@Model.Title</h2>
     <div class="logos">
         @foreach(var item in Model.Logos)
          {  
-             <img src="@item.Url()" alt="" class="logos__logo">
+             <img src="@item.Url()" alt="@item.Name" class="logos__logo">
          }
     </div>
 </div>

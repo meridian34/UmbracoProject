@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Umbraco.Cms.Web.Common;
 using Umbraco.Cms.Web.Common.PublishedModels;
 using Umbraco.Extensions;
@@ -25,7 +24,6 @@ namespace UmbracoProject.Services
                 .First()
                 .DescendantsOrSelf<SectionsFolder>()
                 .First();
-
 
             return sections;
         }

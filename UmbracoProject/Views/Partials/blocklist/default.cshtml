@@ -7,7 +7,6 @@
     var blockList = Model.Where(x => ((IShowBlock)x.Content).ShowComponent == true);
     foreach (var block in Model)
     {
-        //if (block?.ContentUdi == null || ((IShowBlock)block.Content).ShowComponent == false) { continue; }
         var data = block.Content;
         @await Html.PartialAsync("blocklist/Components/" + data.ContentType.Alias, block.Content)
     }

@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Umbraco.Cms.Web.Common.PublishedModels;
 using UmbracoProject.Services;
 
@@ -19,7 +16,6 @@ namespace UmbracoProject.Components.Footer
         public IViewComponentResult Invoke()
         {
             var settings = _settingsService.GetSettings();
-            
             var navigationBlockList = settings.FooterNavigationList.Select(x => (FooterNavigationComponent)x.Content);
             var sourceList = settings.SocialSourceList.Select(x => (SvgMediaItem)x.Content);
 

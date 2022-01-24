@@ -1,7 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @model Umbraco.Cms.Web.Common.PublishedModels.StepsContentBlock;
 @{
     <div class="six-steps-block">
@@ -12,7 +9,7 @@
             {
                 var step = (stepBlockListItem.Content.TryConvertTo<StepContentBlock>()).Result;
                 <div class="step">
-                    <img class="step__image" src="@step.MainImage.Url()" alt="">
+                    <img class="step__image" src="@step.MainImage.Url()" alt="@step.MainImage.Name">
                     <div class="step__body">
                         <h4 class="step__body--title">@step.TextBlockTitle</h4>
                         <p class="step__body--description">@step.TextBlockDescription</p>
@@ -20,12 +17,12 @@
                     </div>
                 </div>
             }
-
-
         </div>
+
         <button class="button primary large btn-main">
             <span class="button__label">@Model.ButtonText</span>
         </button>
+
         <button class="link-decorated accent small btn-secondary underlined">
             <span class="link-decorated__label">@Model.LinkText</span>
         </button>
